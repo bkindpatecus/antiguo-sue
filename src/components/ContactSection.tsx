@@ -1,4 +1,4 @@
-import { MapPin, Phone, Clock, Instagram } from "lucide-react";
+import { MapPin, Phone, Clock, Instagram, Mail } from "lucide-react";
 
 const ContactSection = () => {
   return (
@@ -21,15 +21,23 @@ const ContactSection = () => {
               <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
               <div>
                 <p className="font-display font-semibold text-foreground mb-1">Dirección</p>
-                <p className="font-body text-muted-foreground">Camino al Volcán 10860, El Manzano,<br />San José de Maipo, Cajón del Maipo, Chile</p>
+                <p className="font-body text-muted-foreground">Camino al Volcán #10.860, El Manzano,<br />San José de Maipo, Chile</p>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
               <Phone className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
               <div>
-                <p className="font-display font-semibold text-foreground mb-1">Teléfono</p>
+                <p className="font-display font-semibold text-foreground mb-1">Teléfono / WhatsApp</p>
                 <a href="tel:+56987900077" className="font-body text-muted-foreground hover:text-primary transition-colors">+56 9 8790 0077</a>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+              <div>
+                <p className="font-display font-semibold text-foreground mb-1">Email</p>
+                <a href="mailto:admantiguosueno@gmail.com" className="font-body text-muted-foreground hover:text-primary transition-colors">admantiguosueno@gmail.com</a>
               </div>
             </div>
 
@@ -37,7 +45,12 @@ const ContactSection = () => {
               <Clock className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
               <div>
                 <p className="font-display font-semibold text-foreground mb-1">Horario</p>
-                <p className="font-body text-muted-foreground">Jueves a Domingo: 12:00 – 21:00</p>
+                <div className="font-body text-muted-foreground space-y-1">
+                  <p>Lunes a Jueves: 14:00 – 21:45</p>
+                  <p>Viernes: 13:00 – 22:45</p>
+                  <p>Sábado: 13:00 – 22:00</p>
+                  <p>Domingo: 13:00 – 20:30</p>
+                </div>
               </div>
             </div>
 
@@ -45,7 +58,7 @@ const ContactSection = () => {
               <Instagram className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
               <div>
                 <p className="font-display font-semibold text-foreground mb-1">Instagram</p>
-                <a href="https://instagram.com/antiguosueno" target="_blank" rel="noopener noreferrer" className="font-body text-muted-foreground hover:text-primary transition-colors">@antiguosueno</a>
+                <a href="https://instagram.com/antiguorestoran" target="_blank" rel="noopener noreferrer" className="font-body text-muted-foreground hover:text-primary transition-colors">@antiguorestoran</a>
               </div>
             </div>
           </div>
