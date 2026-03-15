@@ -19,14 +19,6 @@ const HeroSection = () => {
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto animate-fade-in-up">
-        {/* Logo in a styled container */}
-        <div className="mb-8 inline-block">
-          <img 
-            src={logo} 
-            alt="Antiguo Sueño Restorán" 
-            className="h-36 md:h-52 lg:h-64 w-auto mx-auto object-contain" 
-          />
-        </div>
         
         <p className="font-accent text-base md:text-lg uppercase tracking-[0.3em] text-primary/90 mb-4">
           Gastronomía · Música · Mascotas
