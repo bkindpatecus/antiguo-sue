@@ -7,8 +7,8 @@ const FeaturedDishes = () => {
   const dishes = [
     { img: tartare, name: "Tartare de Atún", desc: "Atún fresco con palta, alcaparras y tostadas" },
     { img: pizza, name: "Pizza del Huerto", desc: "Mozzarella, champiñones, rúcula y pesto" },
-    { img: plutonica, name: "Cerveza Plutónica", desc: "Cerveza artesanal elaborada en el Cajón del Maipo" },
-    { img: dishDessert, name: "Postres de la Casa", desc: "Dulces artesanales con productos de la zona" },
+    { img: cerveza, name: "Cerveza Plutónica", desc: "Cerveza artesanal elaborada en el Cajón del Maipo" },
+    { img: tortaZanahoria, name: "Torta de Zanahoria", desc: "Bizcocho húmedo con nuez, canela y manjar" },
   ];
 
   return (
