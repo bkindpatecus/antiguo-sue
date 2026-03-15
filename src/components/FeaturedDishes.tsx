@@ -1,14 +1,14 @@
 import tartare from "@/assets/dish-tartare.jpg";
-import pizza from "@/assets/food-pizza.jpg";
-import pastelChoclo from "@/assets/food-pastel-choclo.jpg";
+import pizza from "@/assets/food-pizza-real.jpg";
+import plutonica from "@/assets/drink-plutonica.jpg";
 import dishDessert from "@/assets/dish-dessert.jpg";
 
 const FeaturedDishes = () => {
   const dishes = [
     { img: tartare, name: "Tartare de Atún", desc: "Atún fresco con palta, alcaparras y tostadas" },
-    { img: pizza, name: "Pizza Artesanal", desc: "Masa madre, mozzarella y albahaca fresca" },
-    { img: pastelChoclo, name: "Pastel de Choclo", desc: "Pino de carne mechada con pastelera de choclo" },
-    { img: dishDessert, name: "Brownie de Chocolate", desc: "Chocolate belga con crema montada" },
+    { img: pizza, name: "Pizza del Huerto", desc: "Mozzarella, champiñones, rúcula y pesto" },
+    { img: plutonica, name: "Cerveza Plutónica", desc: "Cerveza artesanal elaborada en el Cajón del Maipo" },
+    { img: dishDessert, name: "Postres de la Casa", desc: "Dulces artesanales con productos de la zona" },
   ];
 
   return (
