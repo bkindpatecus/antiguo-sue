@@ -24,24 +24,27 @@ const AboutSection = () => {
 
           {/* Resumen */}
           <p className="font-body text-foreground/70 max-w-3xl mx-auto text-lg leading-relaxed">
-            Nacimos el año 2000 como una tienda de antigüedades en el corazón del Cajón del Maipo. Con el tiempo, ese sueño creció y se transformó en un restorán familiar donde la gastronomía casera, la música en vivo desde nuestro icónico camión escenario y un ambiente rodeado de naturaleza se unen para crear experiencias inolvidables.
+            Rememorando sus inicios como tienda de antigüedades (año 2000) a manos de Ángela Roa, el Antiguo Sueño ahora como restorán y trabajado por la familia, deja ver en cada rincón su origen.
           </p>
 
           {/* Texto expandido */}
           {expanded && (
             <div className="max-w-3xl mx-auto mt-6 space-y-4 animate-in fade-in slide-in-from-top-2 duration-300">
               <p className="font-body text-foreground/70 text-lg leading-relaxed">
-                Somos un emprendimiento familiar que comenzó como un pequeño local de antigüedades. Hoy, conservamos esa esencia en cada rincón de nuestra decoración: objetos únicos, iluminación cálida y un ambiente que invita a quedarse. Nuestro menú es de cocina casera, preparado con dedicación y cariño, ideal para compartir en familia o con amigos.
+                Ubicado en las montañas del Cajón del Maipo, en la localidad de El Manzano, el Antiguo Sueño fomenta en un lugar familiar y acogedor, la gastronomía y el comercio local.
               </p>
               <p className="font-body text-foreground/70 text-lg leading-relaxed">
-                Los fines de semana cobramos vida con música en vivo desde nuestro camión escenario, un sello que nos distingue. Además, contamos con un amplio patio al aire libre donde grandes y chicos pueden disfrutar del entorno natural del Cajón del Maipo.
+                Recibiendo a sus clientes a la sombra de sus árboles con una carta de productos frescos y de la zona, siendo amenizados además, por variados espectáculos de música, que desde el camión escenario y bajo un imponente sauce, entretienen a nuestros invitados.
+              </p>
+              <p className="font-body text-foreground/70 text-lg leading-relaxed">
+                Destaca así la elaboración casera de platos, masas y postres, que junto a un café recién molido, marcan un excelente punto final a su experiencia.
               </p>
 
               {/* Nota mascotas */}
-              <div className="flex items-center justify-center gap-3 mt-6 p-4 rounded-sm bg-primary/10 border border-primary/20 max-w-md mx-auto">
-                <PawPrint className="w-6 h-6 text-primary shrink-0" />
+              <div className="flex items-start justify-center gap-3 mt-6 p-4 rounded-sm bg-primary/10 border border-primary/20 max-w-lg mx-auto">
+                <PawPrint className="w-6 h-6 text-primary shrink-0 mt-0.5" />
                 <p className="font-body text-foreground/80 text-sm text-left">
-                  Somos <span className="font-semibold text-primary">pet friendly</span> — tu mascota también es bienvenida a disfrutar de este sueño.
+                  Antiguo Sueño da la bienvenida a todas las mascotas, pero siempre teniendo en cuenta que es un lugar público con niños. Así que, cuida a tu mascota, mantenla junto a ti y disfruta.
                 </p>
               </div>
             </div>
