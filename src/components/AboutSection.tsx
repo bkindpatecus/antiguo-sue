@@ -1,6 +1,8 @@
+import { useState } from "react";
 import exteriorImg from "@/assets/gallery-exterior-night.jpg";
 import interiorImg from "@/assets/interior-salon.jpg";
-import { TreePine, Music, PartyPopper, Heart } from "lucide-react";
+import { TreePine, Music, PartyPopper, Heart, ChevronDown, ChevronUp, PawPrint } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const features = [
   { icon: Heart, title: "Ambiente Familiar", desc: "Un espacio cálido y acogedor para disfrutar en familia." },
@@ -10,16 +12,50 @@ const features = [
 ];
 
 const AboutSection = () => {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <section id="restaurante" className="section-padding bg-card">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <p className="font-accent text-primary uppercase tracking-[0.3em] text-sm mb-4">Conócenos</p>
-          <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6">El Restaurante</h2>
+          <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6">Somos Antiguo Sueño</h2>
           <div className="w-24 h-0.5 bg-primary mx-auto mb-8" />
+
+          {/* Resumen */}
           <p className="font-body text-foreground/70 max-w-3xl mx-auto text-lg leading-relaxed">
-            Un restaurante rústico y artístico con decoración de antigüedades, iluminación cálida y un amplio patio al aire libre rodeado de la naturaleza del Cajón del Maipo. Aquí el tiempo se detiene y cada visita se convierte en un recuerdo especial.
+            Nacimos el año 2000 como una tienda de antigüedades en el corazón del Cajón del Maipo. Con el tiempo, ese sueño creció y se transformó en un restorán familiar donde la gastronomía casera, la música en vivo desde nuestro icónico camión escenario y un ambiente rodeado de naturaleza se unen para crear experiencias inolvidables.
           </p>
+
+          {/* Texto expandido */}
+          {expanded && (
+            <div className="max-w-3xl mx-auto mt-6 space-y-4 animate-in fade-in slide-in-from-top-2 duration-300">
+              <p className="font-body text-foreground/70 text-lg leading-relaxed">
+                Somos un emprendimiento familiar que comenzó como un pequeño local de antigüedades. Hoy, conservamos esa esencia en cada rincón de nuestra decoración: objetos únicos, iluminación cálida y un ambiente que invita a quedarse. Nuestro menú es de cocina casera, preparado con dedicación y cariño, ideal para compartir en familia o con amigos.
+              </p>
+              <p className="font-body text-foreground/70 text-lg leading-relaxed">
+                Los fines de semana cobramos vida con música en vivo desde nuestro camión escenario, un sello que nos distingue. Además, contamos con un amplio patio al aire libre donde grandes y chicos pueden disfrutar del entorno natural del Cajón del Maipo.
+              </p>
+
+              {/* Nota mascotas */}
+              <div className="flex items-center justify-center gap-3 mt-6 p-4 rounded-sm bg-primary/10 border border-primary/20 max-w-md mx-auto">
+                <PawPrint className="w-6 h-6 text-primary shrink-0" />
+                <p className="font-body text-foreground/80 text-sm text-left">
+                  Somos <span className="font-semibold text-primary">pet friendly</span> — tu mascota también es bienvenida a disfrutar de este sueño.
+                </p>
+              </div>
+            </div>
+          )}
+
+          {/* Botón expandir */}
+          <Button
+            variant="ghost"
+            onClick={() => setExpanded(!expanded)}
+            className="mt-6 text-primary hover:text-primary/80 font-accent uppercase tracking-wider text-sm"
+          >
+            {expanded ? "Leer menos" : "Leer más"}
+            {expanded ? <ChevronUp className="ml-1 w-4 h-4" /> : <ChevronDown className="ml-1 w-4 h-4" />}
+          </Button>
         </div>
 
         {/* Images */}
