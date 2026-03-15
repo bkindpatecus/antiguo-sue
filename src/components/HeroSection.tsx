@@ -21,13 +21,11 @@ const HeroSection = () => {
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto animate-fade-in-up">
         {/* Logo in a styled container */}
         <div className="mb-8 inline-block">
-          <div className="bg-cream/90 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-2xl border border-primary/20">
-            <img 
-              src={logo} 
-              alt="Antiguo Sueño Restorán" 
-              className="h-36 md:h-52 lg:h-64 w-auto mx-auto object-contain" 
-            />
-          </div>
+          <img 
+            src={logo} 
+            alt="Antiguo Sueño Restorán" 
+            className="h-36 md:h-52 lg:h-64 w-auto mx-auto object-contain" 
+          />
         </div>
         
         <p className="font-accent text-base md:text-lg uppercase tracking-[0.3em] text-primary/90 mb-4">
