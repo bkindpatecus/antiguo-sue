@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo-antiguo-sueno.png";
+
 
 const navItems = [
   { label: "Inicio", href: "#inicio" },
