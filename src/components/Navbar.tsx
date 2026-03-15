@@ -47,7 +47,7 @@ const Navbar = () => {
             src={logo}
             alt="Antiguo Sueño Restorán"
             className={`transition-all duration-500 object-contain ${
-              scrolled ? "h-18 md:h-28" : "h-20 md:h-40"
+              scrolled ? "h-20 md:h-28" : "h-24 md:h-40"
             }`}
           />
         </button>
