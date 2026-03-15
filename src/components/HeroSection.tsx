@@ -24,7 +24,7 @@ const HeroSection = () => {
           Gastronomía · Música · Mascotas
         </p>
         <p className="font-accent text-lg md:text-2xl uppercase tracking-[0.3em] text-foreground/80 mb-10">
-          SIEMPRE ABIERTO
+          ABIERTO TODOS LOS DÍAS
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
