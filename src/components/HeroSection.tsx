@@ -1,4 +1,6 @@
 import heroImg from "@/assets/hero-restaurant.jpg";
+import logo from "@/assets/logo-antiguo-sueno.png";
+
 
 const HeroSection = () => {
   const scrollTo = (id: string) => {
