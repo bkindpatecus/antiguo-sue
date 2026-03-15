@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Leaf } from "lucide-react";
 
 type MenuItem = {
@@ -200,57 +200,77 @@ const menuData: Category[] = [
 
 const MenuSection = () => {
   const [activeCategory, setActiveCategory] = useState(0);
+  const tabsRef = useRef<HTMLDivElement>(null);
+
+  // Scroll active tab into view on mobile
+  useEffect(() => {
+    if (tabsRef.current) {
+      const activeBtn = tabsRef.current.children[activeCategory] as HTMLElement;
+      if (activeBtn) {
+        activeBtn.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+      }
+    }
+  }, [activeCategory]);
 
   return (
     <section id="menu" className="section-padding bg-card">
       <div className="container mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 md:mb-12">
           <p className="font-accent text-primary uppercase tracking-[0.3em] text-sm mb-4">Nuestra Carta</p>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6">Menú</h2>
           <div className="w-24 h-0.5 bg-primary mx-auto" />
         </div>
 
-        {/* Category tabs */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
-          {menuData.map((cat, i) => (
-            <button
-              key={cat.name}
-              onClick={() => setActiveCategory(i)}
-              className={`px-3 py-2 font-accent text-xs md:text-sm uppercase tracking-wider rounded-sm transition-all duration-300 ${
-                activeCategory === i
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-muted text-muted-foreground hover:text-foreground hover:bg-muted/80"
-              }`}
-            >
-              {cat.name}
-            </button>
-          ))}
+        {/* Category tabs - horizontal scroll on mobile */}
+        <div className="relative mb-8 md:mb-12">
+          <div
+            ref={tabsRef}
+            className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide md:flex-wrap md:justify-center md:overflow-visible md:pb-0"
+          >
+            {menuData.map((cat, i) => (
+              <button
+                key={cat.name}
+                onClick={() => setActiveCategory(i)}
+                className={`px-4 py-2.5 font-accent text-xs md:text-sm uppercase tracking-wider rounded-sm transition-all duration-300 whitespace-nowrap flex-shrink-0 ${
+                  activeCategory === i
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-muted text-muted-foreground hover:text-foreground hover:bg-muted/80"
+                }`}
+              >
+                {cat.name}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Category note */}
         {menuData[activeCategory].note && (
-          <p className="text-center font-body text-muted-foreground italic text-sm mb-8 max-w-2xl mx-auto">
+          <p className="text-center font-body text-muted-foreground italic text-sm mb-8 max-w-2xl mx-auto px-2">
             {menuData[activeCategory].note}
           </p>
         )}
 
         {/* Menu items */}
-        <div className="max-w-3xl mx-auto space-y-5">
+        <div className="max-w-3xl mx-auto space-y-4 md:space-y-5">
           {menuData[activeCategory].items.map((item) => (
             <div
               key={item.name}
-              className="flex justify-between items-start gap-4 pb-5 border-b border-border/50 last:border-0"
+              className="flex items-start justify-between gap-3 md:gap-4 p-4 md:p-5 bg-muted/30 rounded-sm border border-border hover:border-primary/20 transition-colors duration-300"
             >
-              <div className="flex-1">
-                <div className="flex items-center gap-2 mb-1">
-                  <h3 className="font-display text-lg md:text-xl font-semibold text-foreground">{item.name}</h3>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <h4 className="font-display text-base md:text-lg font-semibold text-foreground">{item.name}</h4>
                   {item.vegan && (
-                    <Leaf className="w-4 h-4 text-forest flex-shrink-0" />
+                    <span className="inline-flex items-center gap-1 text-xs font-accent text-secondary uppercase tracking-wider">
+                      <Leaf className="w-3 h-3" /> Vegano
+                    </span>
                   )}
                 </div>
-                <p className="font-body text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+                <p className="font-body text-muted-foreground text-xs md:text-sm mt-1 leading-relaxed">{item.desc}</p>
               </div>
-              <span className="font-display text-base md:text-lg font-bold text-primary whitespace-nowrap flex-shrink-0 mt-1">{item.price}</span>
+              <span className="font-accent text-primary text-sm md:text-base font-semibold whitespace-nowrap flex-shrink-0 pt-0.5">
+                {item.price}
+              </span>
             </div>
           ))}
         </div>

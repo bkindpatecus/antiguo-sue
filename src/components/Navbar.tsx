@@ -23,6 +23,12 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [isOpen]);
+
   const handleClick = (href: string) => {
     setIsOpen(false);
     const el = document.querySelector(href);
@@ -35,9 +41,15 @@ const Navbar = () => {
         scrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between py-2 px-4">
+      <div className="container mx-auto flex items-center justify-between py-1 px-3 md:py-2 md:px-4">
         <button onClick={() => handleClick("#inicio")} className="flex items-center">
-          <img src={logo} alt="Antiguo Sueño Restorán" className={`transition-all duration-500 object-contain ${scrolled ? "h-24 md:h-28" : "h-28 md:h-40"}`} />
+          <img
+            src={logo}
+            alt="Antiguo Sueño Restorán"
+            className={`transition-all duration-500 object-contain ${
+              scrolled ? "h-14 md:h-28" : "h-16 md:h-40"
+            }`}
+          />
         </button>
 
         {/* Desktop */}
@@ -56,28 +68,44 @@ const Navbar = () => {
         {/* Mobile toggle */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden text-foreground"
+          className="lg:hidden text-foreground p-2 -mr-2"
+          aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
-      {isOpen && (
-        <div className="lg:hidden bg-background/98 backdrop-blur-lg border-t border-border">
-          <div className="flex flex-col items-center py-6 gap-4">
-            {navItems.map((item) => (
-              <button
-                key={item.href}
-                onClick={() => handleClick(item.href)}
-                className="font-accent text-lg uppercase tracking-widest text-foreground/80 hover:text-primary transition-colors"
-              >
-                {item.label}
-              </button>
-            ))}
-          </div>
+      {/* Mobile menu - fullscreen overlay */}
+      <div
+        className={`lg:hidden fixed inset-0 top-0 bg-background/98 backdrop-blur-lg transition-all duration-300 ${
+          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+        style={{ zIndex: 60 }}
+      >
+        {/* Close button inside overlay */}
+        <div className="flex justify-end p-4">
+          <button
+            onClick={() => setIsOpen(false)}
+            className="text-foreground p-2"
+            aria-label="Cerrar menú"
+          >
+            <X size={28} />
+          </button>
         </div>
-      )}
+
+        <div className="flex flex-col items-center justify-center gap-6 pt-4">
+          <img src={logo} alt="Antiguo Sueño" className="h-16 object-contain mb-4" />
+          {navItems.map((item) => (
+            <button
+              key={item.href}
+              onClick={() => handleClick(item.href)}
+              className="font-accent text-xl uppercase tracking-widest text-foreground/80 hover:text-primary active:text-primary transition-colors py-1"
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
+      </div>
     </nav>
   );
 };
