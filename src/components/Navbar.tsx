@@ -37,7 +37,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between py-2 px-4">
         <button onClick={() => handleClick("#inicio")} className="flex items-center">
-          <img src={logo} alt="Antiguo Sueño Restorán" className={`transition-all duration-500 object-contain ${scrolled ? "h-16 md:h-20" : "h-20 md:h-28"}`} />
+          <img src={logo} alt="Antiguo Sueño Restorán" className={`transition-all duration-500 object-contain ${scrolled ? "h-20 md:h-24" : "h-24 md:h-36"}`} />
         </button>
 
         {/* Desktop */}
