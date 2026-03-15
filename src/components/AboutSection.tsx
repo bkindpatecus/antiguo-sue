@@ -64,10 +64,10 @@ const AboutSection = () => {
         {/* Images */}
         <div className="grid md:grid-cols-2 gap-6 mb-16">
           <div className="overflow-hidden rounded-sm">
-            <img src={exteriorImg} alt="Exterior del restaurante con luces cálidas al atardecer" className="w-full h-72 md:h-96 object-cover hover:scale-105 transition-transform duration-700" />
+            <img src={exteriorSnowImg} alt="Antiguo Sueño nevado con letrero" className="w-full h-72 md:h-96 object-cover hover:scale-105 transition-transform duration-700" />
           </div>
           <div className="overflow-hidden rounded-sm">
-            <img src={interiorImg} alt="Salón rústico interior de Antiguo Sueño" className="w-full h-72 md:h-96 object-cover hover:scale-105 transition-transform duration-700" />
+            <img src={petFriendlyImg} alt="Mascota disfrutando en el patio de Antiguo Sueño" className="w-full h-72 md:h-96 object-cover hover:scale-105 transition-transform duration-700" />
           </div>
         </div>
 
