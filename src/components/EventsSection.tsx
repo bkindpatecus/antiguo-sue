@@ -1,5 +1,6 @@
-import { PartyPopper, Heart, Music, Users } from "lucide-react";
+import { PartyPopper, Heart, Music, Users, Gift } from "lucide-react";
 import galleryMusic from "@/assets/gallery-music.jpg";
+import giftCardImg from "@/assets/gift-card.jpg";
 
 const events = [
   { icon: PartyPopper, title: "Cumpleaños", desc: "Celebra tu día especial en un entorno único rodeado de naturaleza y con atención personalizada." },
@@ -21,7 +22,7 @@ const EventsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {events.map((e) => (
               <div key={e.title} className="p-6 bg-muted/50 rounded-sm border border-border hover:border-primary/30 transition-colors duration-300">
@@ -36,7 +37,34 @@ const EventsSection = () => {
           </div>
         </div>
 
-        <div className="text-center">
+        {/* Gift Card Section */}
+        <div className="bg-muted/50 rounded-sm border border-border p-8 md:p-12">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="text-center md:text-left">
+              <Gift className="w-10 h-10 text-primary mb-4 mx-auto md:mx-0" />
+              <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">Regala Experiencias</h3>
+              <p className="font-body text-muted-foreground mb-3 text-lg">
+                Consigue tu Gift Card de consumo en Antiguo Sueño.
+              </p>
+              <p className="font-body text-muted-foreground mb-6">
+                Cárgala con el monto que desees. Canjeable en todo el año 2026.
+              </p>
+              <a
+                href="https://wa.me/56987900077?text=Hola%2C%20quiero%20consultar%20por%20una%20Gift%20Card%20de%20Antiguo%20Sue%C3%B1o"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-8 py-4 bg-primary text-primary-foreground font-accent text-base uppercase tracking-widest rounded-sm hover:bg-gold-glow transition-colors duration-300 glow-warm"
+              >
+                Pedir Gift Card
+              </a>
+            </div>
+            <div className="overflow-hidden rounded-sm">
+              <img src={giftCardImg} alt="Gift Card Antiguo Sueño" className="w-full h-auto rounded-sm" />
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center mt-12">
           <a
             href="https://wa.me/56987900077?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20por%20un%20evento%20en%20Antiguo%20Sue%C3%B1o"
             target="_blank"
