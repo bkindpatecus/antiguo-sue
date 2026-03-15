@@ -25,7 +25,7 @@ const ReservationSection = () => {
           <div className="w-24 h-0.5 bg-primary mx-auto" />
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-5 bg-card p-8 md:p-10 rounded-sm border border-border">
+        <form onSubmit={handleSubmit} className="space-y-4 md:space-y-5 bg-card p-5 md:p-10 rounded-sm border border-border">
           <div className="relative">
             <User className="absolute left-3 top-3.5 w-5 h-5 text-muted-foreground" />
             <input type="text" placeholder="Nombre completo" required value={form.nombre} onChange={(e) => update("nombre", e.target.value)} className={`${inputClass} pl-11`} />
