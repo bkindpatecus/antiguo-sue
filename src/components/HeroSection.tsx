@@ -18,24 +18,24 @@ const HeroSection = () => {
       {/* Gradient bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
 
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto animate-fade-in-up">
+      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto animate-fade-in-up pt-20 md:pt-0">
         
-        <p className="font-accent text-base md:text-lg uppercase tracking-[0.3em] text-primary/90 mb-4">
+        <p className="font-accent text-sm md:text-lg uppercase tracking-[0.2em] md:tracking-[0.3em] text-primary/90 mb-3 md:mb-4">
           Gastronomía · Música · Mascotas
         </p>
-        <p className="font-accent text-lg md:text-2xl uppercase tracking-[0.3em] text-foreground/80 mb-10">
+        <p className="font-accent text-base md:text-2xl uppercase tracking-[0.2em] md:tracking-[0.3em] text-foreground/80 mb-8 md:mb-10">
           ABIERTO TODOS LOS DÍAS
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4">
           <button
             onClick={() => scrollTo("#menu")}
-            className="px-8 py-4 bg-primary text-primary-foreground font-accent text-lg uppercase tracking-widest rounded-sm hover:bg-gold-glow transition-colors duration-300 glow-warm"
+            className="w-full sm:w-auto px-8 py-3.5 md:py-4 bg-primary text-primary-foreground font-accent text-base md:text-lg uppercase tracking-widest rounded-sm hover:bg-gold-glow transition-colors duration-300 glow-warm"
           >
             Ver Menú
           </button>
           <button
             onClick={() => scrollTo("#reservas")}
-            className="px-8 py-4 border border-primary text-primary font-accent text-lg uppercase tracking-widest rounded-sm hover:bg-primary/10 transition-colors duration-300"
+            className="w-full sm:w-auto px-8 py-3.5 md:py-4 border border-primary text-primary font-accent text-base md:text-lg uppercase tracking-widest rounded-sm hover:bg-primary/10 transition-colors duration-300"
           >
             Reservar Mesa
           </button>

@@ -44,8 +44,8 @@ const EventsSection = () => {
         </div>
 
         {/* Gift Card Section */}
-        <div className="bg-muted/50 rounded-sm border border-border p-8 md:p-12">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+        <div className="bg-muted/50 rounded-sm border border-border p-6 md:p-12">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center">
             <div className="text-center md:text-left">
               <Gift className="w-10 h-10 text-primary mb-4 mx-auto md:mx-0" />
               <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">Regala Experiencias</h3>
