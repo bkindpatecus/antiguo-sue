@@ -48,7 +48,7 @@ const ShowsSection = () => {
   const visible = getVisibleIndexes();
 
   return (
-    <section className="section-padding bg-background overflow-hidden">
+    <section id="shows" className="section-padding bg-background overflow-hidden">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <p className="font-accent text-primary uppercase tracking-[0.3em] text-sm mb-4">Cada fin de semana</p>
