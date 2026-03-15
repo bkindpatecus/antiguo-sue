@@ -31,8 +31,8 @@ const HeroSection = () => {
         <p className="font-accent text-base md:text-lg uppercase tracking-[0.3em] text-primary/90 mb-4">
           Gastronomía · Música · Mascotas
         </p>
-        <p className="font-body text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Disfruta buena comida, música y un ambiente mágico rodeado de naturaleza en el Cajón del Maipo.
+        <p className="font-accent text-lg md:text-2xl uppercase tracking-[0.3em] text-foreground/80 mb-10">
+          SIEMPRE ABIERTO
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
