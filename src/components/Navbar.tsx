@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo-antiguo-sueno.png";
 
-
 const navItems = [
   { label: "Inicio", href: "#inicio" },
   { label: "Restaurante", href: "#restaurante" },
@@ -35,9 +34,14 @@ const Navbar = () => {
         scrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between py-4 px-4">
-        <button onClick={() => handleClick("#inicio")} className="flex items-center">
-          <img src={logo} alt="Antiguo Sueño Restorán" className="h-12 md:h-16 w-auto object-contain" />
+      <div className="container mx-auto flex items-center justify-between py-2 px-4">
+        <button onClick={() => handleClick("#inicio")} className="flex items-center gap-3">
+          <div className={`rounded-full overflow-hidden transition-all duration-500 ${scrolled ? "h-10 w-10 md:h-12 md:w-12" : "h-12 w-12 md:h-14 md:w-14"} bg-cream/90 backdrop-blur-sm shadow-md border border-primary/20`}>
+            <img src={logo} alt="Antiguo Sueño Restorán" className="h-full w-full object-cover scale-150" />
+          </div>
+          <span className="font-display text-lg md:text-xl font-bold text-primary tracking-wide hidden sm:block">
+            Antiguo Sueño
+          </span>
         </button>
 
         {/* Desktop */}
