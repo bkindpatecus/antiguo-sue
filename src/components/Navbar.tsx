@@ -36,9 +36,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between py-2 px-4">
         <button onClick={() => handleClick("#inicio")} className="flex items-center gap-3">
-          <div className={`rounded-full overflow-hidden transition-all duration-500 ${scrolled ? "h-10 w-10 md:h-12 md:w-12" : "h-12 w-12 md:h-14 md:w-14"} bg-cream/90 backdrop-blur-sm shadow-md border border-primary/20`}>
-            <img src={logo} alt="Antiguo Sueño Restorán" className="h-full w-full object-cover scale-150" />
-          </div>
+          <img src={logo} alt="Antiguo Sueño Restorán" className={`transition-all duration-500 object-contain ${scrolled ? "h-10 md:h-12" : "h-12 md:h-14"}`} />
           <span className="font-display text-lg md:text-xl font-bold text-primary tracking-wide hidden sm:block">
             Antiguo Sueño
           </span>
