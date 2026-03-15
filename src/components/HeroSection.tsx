@@ -19,11 +19,7 @@ const HeroSection = () => {
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto animate-fade-in-up">
-        <img
-          src={logo}
-          alt="Antiguo Sueño"
-          className="mx-auto w-48 md:w-72 mb-8 drop-shadow-[0_4px_24px_rgba(0,0,0,0.5)]"
-        />
+        
         <p className="font-accent text-base md:text-lg uppercase tracking-[0.3em] text-primary/90 mb-4">
           Gastronomía · Música · Mascotas
         </p>
