@@ -35,11 +35,8 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-2 px-4">
-        <button onClick={() => handleClick("#inicio")} className="flex items-center gap-3">
-          <img src={logo} alt="Antiguo Sueño Restorán" className={`transition-all duration-500 object-contain ${scrolled ? "h-10 md:h-12" : "h-12 md:h-14"}`} />
-          <span className="font-display text-lg md:text-xl font-bold text-primary tracking-wide hidden sm:block">
-            Antiguo Sueño
-          </span>
+        <button onClick={() => handleClick("#inicio")} className="flex items-center">
+          <img src={logo} alt="Antiguo Sueño Restorán" className={`transition-all duration-500 object-contain ${scrolled ? "h-12 md:h-16" : "h-16 md:h-20"}`} />
         </button>
 
         {/* Desktop */}
