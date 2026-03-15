@@ -1,3 +1,5 @@
+import logo from "@/assets/logo-antiguo-sueno.png";
+
 const Footer = () => {
   return (
     <footer className="py-10 bg-background border-t border-border">
