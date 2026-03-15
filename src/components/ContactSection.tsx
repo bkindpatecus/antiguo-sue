@@ -46,9 +46,10 @@ const ContactSection = () => {
               <div>
                 <p className="font-display font-semibold text-foreground mb-1">Horario</p>
                 <div className="font-body text-muted-foreground space-y-1">
-                  <p>Lunes a Jueves: 14:00 – 21:45</p>
+                  <p>Lunes a Miércoles: 14:00 – 21:45</p>
+                  <p>Jueves: 14:00 – 22:45</p>
                   <p>Viernes: 13:00 – 22:45</p>
-                  <p>Sábado: 13:00 – 22:00</p>
+                  <p>Sábado: 13:00 – 22:45</p>
                   <p>Domingo: 13:00 – 20:30</p>
                 </div>
               </div>
