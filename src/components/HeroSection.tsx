@@ -1,4 +1,4 @@
-import heroImg from "@/assets/hero-snow.jpg";
+import heroImg from "@/assets/hero-entrance.jpg";
 import logo from "@/assets/logo-antiguo-sueno.png";
 
 const HeroSection = () => {
