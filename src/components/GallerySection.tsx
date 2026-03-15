@@ -16,7 +16,7 @@ const images = [
   { src: entranceSnow, alt: "Entrada de Antiguo Sueño nevada" },
   { src: interiorSalon, alt: "Salón rústico con decoración de antigüedades" },
   { src: decorTruck, alt: "Decoración vintage con camioneta y bicicletas" },
-  { src: galleryNature, alt: "Paisaje del Cajón del Maipo" },
+  { src: galleryNature, alt: "Show en vivo con público disfrutando" },
   { src: snowBus, alt: "Bus vintage nevado en la entrada" },
   { src: games, alt: "Juegos de mesa artesanales" },
   { src: galleryPatio, alt: "Patio al aire libre rodeado de naturaleza" },
