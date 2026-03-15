@@ -23,10 +23,11 @@ const HeroSection = () => {
         <p className="font-accent text-lg md:text-xl uppercase tracking-[0.3em] text-primary mb-6">
           Cajón del Maipo · El Manzano
         </p>
-        <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight mb-6">
-          Antiguo Sueño{" "}
-          <span className="gold-text">Restorán</span>
-        </h1>
+        <img 
+          src={logo} 
+          alt="Antiguo Sueño Restorán" 
+          className="h-32 md:h-48 w-auto mx-auto mb-6 object-contain filter drop-shadow-lg" 
+        />
         <p className="font-body text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto mb-10 leading-relaxed">
           Disfruta buena comida, música y un ambiente mágico rodeado de naturaleza.
         </p>
