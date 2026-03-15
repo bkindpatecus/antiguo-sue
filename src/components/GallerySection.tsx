@@ -1,19 +1,19 @@
 import { useState } from "react";
 import { X } from "lucide-react";
-import galleryPatio from "@/assets/gallery-patio.jpg";
-import galleryMusic from "@/assets/gallery-music.jpg";
-import galleryInterior from "@/assets/gallery-interior.jpg";
+import exteriorNight from "@/assets/gallery-exterior-night.jpg";
+import entranceSnow from "@/assets/gallery-entrance-snow.jpg";
+import games from "@/assets/gallery-games.jpg";
+import tartare from "@/assets/dish-tartare.jpg";
+import heroSnow from "@/assets/hero-snow.jpg";
 import galleryNature from "@/assets/gallery-nature.jpg";
-import dish1 from "@/assets/dish-1.jpg";
-import dish2 from "@/assets/dish-2.jpg";
 
 const images = [
-  { src: galleryPatio, alt: "Patio exterior con luces cálidas" },
-  { src: dish1, alt: "Plato gourmet del restaurante" },
-  { src: galleryInterior, alt: "Interior con decoración de antigüedades" },
+  { src: exteriorNight, alt: "Exterior del restaurante con luces cálidas" },
+  { src: tartare, alt: "Tartare gourmet con tostadas" },
+  { src: entranceSnow, alt: "Entrada de Antiguo Sueño nevada" },
+  { src: games, alt: "Juegos de mesa artesanales" },
+  { src: heroSnow, alt: "Restaurante rodeado de nieve y montañas" },
   { src: galleryNature, alt: "Paisaje del Cajón del Maipo" },
-  { src: galleryMusic, alt: "Música en vivo al atardecer" },
-  { src: dish2, alt: "Pizza artesanal en horno de leña" },
 ];
 
 const GallerySection = () => {
