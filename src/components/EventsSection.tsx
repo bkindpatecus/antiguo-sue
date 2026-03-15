@@ -1,5 +1,6 @@
 import { PartyPopper, Heart, Music, Users, Gift } from "lucide-react";
-import galleryMusic from "@/assets/gallery-music.jpg";
+import showBand from "@/assets/show-band.jpg";
+import eventCake from "@/assets/event-wedding-cake.jpg";
 import giftCardImg from "@/assets/gift-card.jpg";
 
 const events = [
@@ -32,8 +33,13 @@ const EventsSection = () => {
               </div>
             ))}
           </div>
-          <div className="overflow-hidden rounded-sm">
-            <img src={galleryMusic} alt="Evento de música en vivo" className="w-full h-full object-cover min-h-[300px]" />
+          <div className="grid grid-rows-2 gap-4">
+            <div className="overflow-hidden rounded-sm">
+              <img src={showBand} alt="Banda en vivo en Antiguo Sueño" className="w-full h-full object-cover min-h-[140px]" />
+            </div>
+            <div className="overflow-hidden rounded-sm">
+              <img src={eventCake} alt="Torta de matrimonio en evento" className="w-full h-full object-cover min-h-[140px]" />
+            </div>
           </div>
         </div>
 

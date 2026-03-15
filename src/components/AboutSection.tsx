@@ -1,5 +1,5 @@
 import exteriorImg from "@/assets/gallery-exterior-night.jpg";
-import entranceImg from "@/assets/gallery-entrance-snow.jpg";
+import interiorImg from "@/assets/interior-salon.jpg";
 import { TreePine, Music, PartyPopper, Heart } from "lucide-react";
 
 const features = [
@@ -28,7 +28,7 @@ const AboutSection = () => {
             <img src={exteriorImg} alt="Exterior del restaurante con luces cálidas al atardecer" className="w-full h-72 md:h-96 object-cover hover:scale-105 transition-transform duration-700" />
           </div>
           <div className="overflow-hidden rounded-sm">
-            <img src={entranceImg} alt="Entrada de Antiguo Sueño con nieve" className="w-full h-72 md:h-96 object-cover hover:scale-105 transition-transform duration-700" />
+            <img src={interiorImg} alt="Salón rústico interior de Antiguo Sueño" className="w-full h-72 md:h-96 object-cover hover:scale-105 transition-transform duration-700" />
           </div>
         </div>
 

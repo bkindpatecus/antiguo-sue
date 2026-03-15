@@ -4,16 +4,22 @@ import exteriorNight from "@/assets/gallery-exterior-night.jpg";
 import entranceSnow from "@/assets/gallery-entrance-snow.jpg";
 import games from "@/assets/gallery-games.jpg";
 import tartare from "@/assets/dish-tartare.jpg";
-import heroSnow from "@/assets/hero-snow.jpg";
+import interiorSalon from "@/assets/interior-salon.jpg";
 import galleryNature from "@/assets/gallery-nature.jpg";
+import decorTruck from "@/assets/decor-vintage-truck.jpg";
+import snowBus from "@/assets/exterior-snow-bus.jpg";
+import galleryPatio from "@/assets/gallery-patio-2.jpg";
 
 const images = [
   { src: exteriorNight, alt: "Exterior del restaurante con luces cálidas" },
   { src: tartare, alt: "Tartare gourmet con tostadas" },
   { src: entranceSnow, alt: "Entrada de Antiguo Sueño nevada" },
-  { src: games, alt: "Juegos de mesa artesanales" },
-  { src: heroSnow, alt: "Restaurante rodeado de nieve y montañas" },
+  { src: interiorSalon, alt: "Salón rústico con decoración de antigüedades" },
+  { src: decorTruck, alt: "Decoración vintage con camioneta y bicicletas" },
   { src: galleryNature, alt: "Paisaje del Cajón del Maipo" },
+  { src: snowBus, alt: "Bus vintage nevado en la entrada" },
+  { src: games, alt: "Juegos de mesa artesanales" },
+  { src: galleryPatio, alt: "Patio al aire libre rodeado de naturaleza" },
 ];
 
 const GallerySection = () => {

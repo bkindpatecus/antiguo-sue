@@ -1,13 +1,13 @@
 import tartare from "@/assets/dish-tartare.jpg";
-import dish2 from "@/assets/dish-2.jpg";
-import dish3 from "@/assets/dish-3.jpg";
+import pizza from "@/assets/food-pizza.jpg";
+import pastelChoclo from "@/assets/food-pastel-choclo.jpg";
 import dishDessert from "@/assets/dish-dessert.jpg";
 
 const FeaturedDishes = () => {
   const dishes = [
     { img: tartare, name: "Tartare de Atún", desc: "Atún fresco con palta, alcaparras y tostadas" },
-    { img: dish2, name: "Pizza Artesanal", desc: "Masa madre, mozzarella y albahaca fresca" },
-    { img: dish3, name: "Hamburguesa del Cajón", desc: "Carne angus, queso cheddar y tocino ahumado" },
+    { img: pizza, name: "Pizza Artesanal", desc: "Masa madre, mozzarella y albahaca fresca" },
+    { img: pastelChoclo, name: "Pastel de Choclo", desc: "Pino de carne mechada con pastelera de choclo" },
     { img: dishDessert, name: "Brownie de Chocolate", desc: "Chocolate belga con crema montada" },
   ];
 
