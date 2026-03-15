@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="py-10 bg-background border-t border-border">
       <div className="container mx-auto text-center">
-        <p className="font-display text-2xl font-bold text-primary mb-3">Antiguo Sueño Restorán</p>
+        <img src={logo} alt="Antiguo Sueño Restorán" className="h-16 w-auto mx-auto mb-3 object-contain" />
         <p className="font-body text-muted-foreground text-sm mb-2">
           Camino al Volcán 10860, El Manzano · Cajón del Maipo, Chile
         </p>

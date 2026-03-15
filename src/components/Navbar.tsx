@@ -36,8 +36,8 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
-        <button onClick={() => handleClick("#inicio")} className="font-display text-xl md:text-2xl font-bold text-primary tracking-wide">
-          Antiguo Sueño
+        <button onClick={() => handleClick("#inicio")} className="flex items-center">
+          <img src={logo} alt="Antiguo Sueño Restorán" className="h-12 md:h-16 w-auto object-contain" />
         </button>
 
         {/* Desktop */}
