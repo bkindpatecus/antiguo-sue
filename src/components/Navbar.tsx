@@ -41,8 +41,8 @@ const Navbar = () => {
         scrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between py-1 px-3 md:py-2 md:px-4">
-        <button onClick={() => handleClick("#inicio")} className="flex items-center">
+      <div className="container mx-auto flex items-center justify-between py-2 px-6 md:py-2 md:px-4">
+        <button onClick={() => handleClick("#inicio")} className="flex items-center ml-2 md:ml-0 mt-1 md:mt-0">
           <img
             src={logo}
             alt="Antiguo Sueño Restorán"
