@@ -1,7 +1,7 @@
 import tartare from "@/assets/dish-tartare.jpg";
 import pizza from "@/assets/food-pizza-real.jpg";
-import plutonica from "@/assets/drink-plutonica.jpg";
-import dishDessert from "@/assets/dish-dessert.jpg";
+import cerveza from "@/assets/food-cerveza-patio.jpg";
+import tortaZanahoria from "@/assets/food-torta-zanahoria.jpg";
 
 const FeaturedDishes = () => {
   const dishes = [
