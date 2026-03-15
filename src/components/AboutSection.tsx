@@ -1,6 +1,6 @@
 import { useState } from "react";
-import exteriorImg from "@/assets/gallery-exterior-night.jpg";
-import interiorImg from "@/assets/interior-salon.jpg";
+import petFriendlyImg from "@/assets/pet-friendly.jpg";
+import exteriorSnowImg from "@/assets/exterior-snow-sign.jpg";
 import { TreePine, Music, PartyPopper, Heart, ChevronDown, ChevronUp, PawPrint } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
