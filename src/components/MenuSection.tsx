@@ -245,7 +245,7 @@ const MenuSection = () => {
                 <div className="flex items-center gap-2 mb-1">
                   <h3 className="font-display text-lg md:text-xl font-semibold text-foreground">{item.name}</h3>
                   {item.vegan && (
-                    <Leaf className="w-4 h-4 text-green-500 flex-shrink-0" />
+                    <Leaf className="w-4 h-4 text-forest flex-shrink-0" />
                   )}
                 </div>
                 <p className="font-body text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
