@@ -26,6 +26,8 @@ const shows = [
 
 import showBototaFox from "@/assets/show-botota-fox.jpg";
 
+const INITIAL_VISIBLE = 3;
+
 const upcomingShows = [
   { date: "21", month: "MAR", day: "Sábado", time: "21:00", artist: "Botota Fox", genre: "Stand Up Comedy", description: "La Fiebre Soy Yo — Stand Up Comedy con Botota Fox. Entrada: $20.000. Cupos limitados. Reservas al +569 8790 0077.", image: showBototaFox },
   { date: "?", month: "???", day: "", time: "", artist: "Próximamente...", genre: "Sorpresa", description: "Algo grande se viene. Mantente atento a nuestras redes para el anuncio.", mystery: true },
@@ -35,6 +37,10 @@ const upcomingShows = [
 const ShowsSection = () => {
   const [current, setCurrent] = useState(0);
   const [expandedShow, setExpandedShow] = useState<number | null>(null);
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleShows = showAll ? upcomingShows : upcomingShows.slice(0, INITIAL_VISIBLE);
+  const hasMore = upcomingShows.length > INITIAL_VISIBLE;
 
   const next = () => setCurrent((prev) => (prev + 1) % shows.length);
   const prev = () => setCurrent((prev) => (prev - 1 + shows.length) % shows.length);
@@ -125,14 +131,13 @@ const ShowsSection = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto items-start">
-            {upcomingShows.map((show, i) => (
+            {visibleShows.map((show, i) => (
               <div
                 key={i}
                 className={`group text-left border rounded-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-hidden ${
                   show.image ? "border-primary/50 bg-card" : "border-border bg-card hover:border-primary/50"
                 }`}
               >
-                {/* Show image - fills all available space above info */}
                 {show.image && (
                   <div className="overflow-hidden">
                     <img src={show.image} alt={show.artist} className="w-full object-cover object-top" />
@@ -140,10 +145,9 @@ const ShowsSection = () => {
                 )}
 
                 <div className="p-6">
-                  {/* Date block */}
-                  <button
+                  <div
                     onClick={() => setExpandedShow(expandedShow === i ? null : i)}
-                    className="w-full text-left"
+                    className="w-full text-left cursor-pointer"
                   >
                     <div className="flex items-start gap-4 mb-4">
                       <div className="text-center min-w-[3.5rem]">
@@ -160,7 +164,6 @@ const ShowsSection = () => {
                       </div>
                     </div>
 
-                    {/* Details */}
                     {!show.mystery && (
                       <div className="flex items-center gap-4 text-sm text-muted-foreground">
                         <span className="inline-flex items-center gap-1">
@@ -174,15 +177,13 @@ const ShowsSection = () => {
                       </div>
                     )}
 
-                    {/* Expanded description */}
                     {expandedShow === i && (
                       <p className="mt-4 pt-4 border-t border-border text-sm text-foreground/70 font-body animate-in fade-in slide-in-from-top-2 duration-300">
                         {show.description}
                       </p>
                     )}
-                  </button>
+                  </div>
 
-                  {/* WhatsApp reserve button for Botota Fox */}
                   {show.image && (
                     <a
                       href="https://wa.me/56987900077?text=Hola%2C%20quiero%20reservar%20para%20el%20show%20de%20Botota%20Fox%20el%2021%20de%20marzo"
@@ -197,6 +198,17 @@ const ShowsSection = () => {
               </div>
             ))}
           </div>
+
+          {hasMore && (
+            <div className="text-center mt-8">
+              <button
+                onClick={() => setShowAll(!showAll)}
+                className="inline-flex items-center gap-2 px-8 py-3 border border-primary/50 text-primary font-accent text-sm uppercase tracking-widest rounded-sm hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+              >
+                {showAll ? "Ver menos" : `Ver más shows (${upcomingShows.length - INITIAL_VISIBLE})`}
+              </button>
+            </div>
+          )}
         </div>
 
         {/* CTA */}
