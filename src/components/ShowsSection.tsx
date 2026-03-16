@@ -132,10 +132,10 @@ const ShowsSection = () => {
                   show.image ? "border-primary/50 bg-card" : "border-border bg-card hover:border-primary/50"
                 }`}
               >
-                {/* Show image if available */}
+                {/* Show image - fills all available space above info */}
                 {show.image && (
-                  <div className="aspect-[9/16] max-h-[420px] sm:max-h-[360px] overflow-hidden">
-                    <img src={show.image} alt={show.artist} className="w-full h-full object-cover object-top" />
+                  <div className="overflow-hidden">
+                    <img src={show.image} alt={show.artist} className="w-full object-cover object-top" />
                   </div>
                 )}
 
