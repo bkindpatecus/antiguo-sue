@@ -47,7 +47,7 @@ const Navbar = () => {
             src={logo}
             alt="Antiguo Sueño Restorán"
             className={`transition-all duration-500 object-contain ${
-              scrolled ? "h-20 md:h-28" : "h-24 md:h-40"
+              scrolled ? "h-24 md:h-32" : "h-28 md:h-48"
             }`}
           />
         </button>
@@ -94,7 +94,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex flex-col items-center justify-center gap-6 pt-4">
-          <img src={logo} alt="Antiguo Sueño" className="h-16 object-contain mb-4" />
+          <img src={logo} alt="Antiguo Sueño" className="h-20 object-contain mb-4" />
           {navItems.map((item) => (
             <button
               key={item.href}
