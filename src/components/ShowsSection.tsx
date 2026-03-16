@@ -24,10 +24,12 @@ const shows = [
   { src: showAudience, alt: "Público disfrutando del show" },
 ];
 
+import showBototaFox from "@/assets/show-botota-fox.jpg";
+
 const upcomingShows = [
-  { date: "22", month: "MAR", day: "Sábado", time: "21:00", artist: "Por confirmar", genre: "Rock / Folk", description: "Una noche de rock y folk con artistas locales en el escenario al aire libre." },
-  { date: "29", month: "MAR", day: "Sábado", time: "21:00", artist: "Por confirmar", genre: "Música Latina", description: "Ritmos latinos para disfrutar con buena comida y amigos." },
-  { date: "05", month: "ABR", day: "Sábado", time: "21:00", artist: "Por confirmar", genre: "Jazz & Blues", description: "Jazz y blues en vivo para una velada inolvidable." },
+  { date: "21", month: "MAR", day: "Sábado", time: "21:00", artist: "Botota Fox", genre: "Stand Up Comedy", description: "La Fiebre Soy Yo — Stand Up Comedy con Botota Fox. Entrada: $20.000. Cupos limitados. Reservas al +569 8790 0077.", image: showBototaFox },
+  { date: "29", month: "MAR", day: "Sábado", time: "21:00", artist: "Próximamente...", genre: "Sorpresa", description: "Algo grande se viene. Mantente atento a nuestras redes para el anuncio." },
+  { date: "05", month: "ABR", day: "Sábado", time: "21:00", artist: "Próximamente...", genre: "Sorpresa", description: "Una noche que no te querrás perder. Pronto revelaremos los detalles." },
 ];
 
 const ShowsSection = () => {
@@ -122,45 +124,58 @@ const ShowsSection = () => {
             <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground">Próximos Shows</h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {upcomingShows.map((show, i) => (
               <button
                 key={i}
                 onClick={() => setExpandedShow(expandedShow === i ? null : i)}
-                className="group text-left border border-border rounded-sm bg-card p-6 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:-translate-y-1"
+                className={`group text-left border rounded-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-hidden ${
+                  show.image ? "border-primary/50 bg-card" : "border-border bg-card hover:border-primary/50"
+                }`}
               >
-                {/* Date block */}
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="text-center min-w-[3.5rem]">
-                    <span className="block font-display text-3xl font-bold text-primary leading-none">{show.date}</span>
-                    <span className="block font-accent text-xs uppercase tracking-widest text-primary/80 mt-1">{show.month}</span>
+                {/* Show image if available */}
+                {show.image && (
+                  <div className="aspect-[3/4] max-h-[280px] overflow-hidden">
+                    <img src={show.image} alt={show.artist} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
                   </div>
-                  <div className="flex-1">
-                    <p className="font-display text-lg font-semibold text-foreground group-hover:text-primary transition-colors">
-                      {show.artist}
-                    </p>
-                    <p className="text-muted-foreground text-sm">{show.day}</p>
-                  </div>
-                </div>
-
-                {/* Details */}
-                <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                  <span className="inline-flex items-center gap-1">
-                    <Clock className="w-3.5 h-3.5" />
-                    {show.time}
-                  </span>
-                  <span className="inline-flex items-center gap-1">
-                    <Tag className="w-3.5 h-3.5" />
-                    {show.genre}
-                  </span>
-                </div>
-
-                {/* Expanded description */}
-                {expandedShow === i && (
-                  <p className="mt-4 pt-4 border-t border-border text-sm text-foreground/70 font-body animate-in fade-in slide-in-from-top-2 duration-300">
-                    {show.description}
-                  </p>
                 )}
+
+                <div className="p-6">
+                  {/* Date block */}
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="text-center min-w-[3.5rem]">
+                      <span className="block font-display text-3xl font-bold text-primary leading-none">{show.date}</span>
+                      <span className="block font-accent text-xs uppercase tracking-widest text-primary/80 mt-1">{show.month}</span>
+                    </div>
+                    <div className="flex-1">
+                      <p className={`font-display text-lg font-semibold group-hover:text-primary transition-colors ${
+                        show.artist === "Próximamente..." ? "text-primary/60 italic" : "text-foreground"
+                      }`}>
+                        {show.artist}
+                      </p>
+                      <p className="text-muted-foreground text-sm">{show.day}</p>
+                    </div>
+                  </div>
+
+                  {/* Details */}
+                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                    <span className="inline-flex items-center gap-1">
+                      <Clock className="w-3.5 h-3.5" />
+                      {show.time}
+                    </span>
+                    <span className="inline-flex items-center gap-1">
+                      <Tag className="w-3.5 h-3.5" />
+                      {show.genre}
+                    </span>
+                  </div>
+
+                  {/* Expanded description */}
+                  {expandedShow === i && (
+                    <p className="mt-4 pt-4 border-t border-border text-sm text-foreground/70 font-body animate-in fade-in slide-in-from-top-2 duration-300">
+                      {show.description}
+                    </p>
+                  )}
+                </div>
               </button>
             ))}
           </div>
