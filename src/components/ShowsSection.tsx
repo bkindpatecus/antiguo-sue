@@ -158,16 +158,18 @@ const ShowsSection = () => {
                   </div>
 
                   {/* Details */}
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                    <span className="inline-flex items-center gap-1">
-                      <Clock className="w-3.5 h-3.5" />
-                      {show.time}
-                    </span>
-                    <span className="inline-flex items-center gap-1">
-                      <Tag className="w-3.5 h-3.5" />
-                      {show.genre}
-                    </span>
-                  </div>
+                  {!show.mystery && (
+                    <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                      <span className="inline-flex items-center gap-1">
+                        <Clock className="w-3.5 h-3.5" />
+                        {show.time}
+                      </span>
+                      <span className="inline-flex items-center gap-1">
+                        <Tag className="w-3.5 h-3.5" />
+                        {show.genre}
+                      </span>
+                    </div>
+                  )}
 
                   {/* Expanded description */}
                   {expandedShow === i && (
