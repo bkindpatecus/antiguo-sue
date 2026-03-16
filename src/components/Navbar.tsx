@@ -94,7 +94,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex flex-col items-center justify-center gap-6 pt-4">
-          <img src={logo} alt="Antiguo Sueño" className="h-20 object-contain mb-4" />
+          <img src={logo} alt="Antiguo Sueño" className="h-24 object-contain mb-4" />
           {navItems.map((item) => (
             <button
               key={item.href}
