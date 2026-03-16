@@ -24,10 +24,12 @@ const shows = [
   { src: showAudience, alt: "Público disfrutando del show" },
 ];
 
+import showBototaFox from "@/assets/show-botota-fox.jpg";
+
 const upcomingShows = [
-  { date: "22", month: "MAR", day: "Sábado", time: "21:00", artist: "Por confirmar", genre: "Rock / Folk", description: "Una noche de rock y folk con artistas locales en el escenario al aire libre." },
-  { date: "29", month: "MAR", day: "Sábado", time: "21:00", artist: "Por confirmar", genre: "Música Latina", description: "Ritmos latinos para disfrutar con buena comida y amigos." },
-  { date: "05", month: "ABR", day: "Sábado", time: "21:00", artist: "Por confirmar", genre: "Jazz & Blues", description: "Jazz y blues en vivo para una velada inolvidable." },
+  { date: "21", month: "MAR", day: "Sábado", time: "21:00", artist: "Botota Fox", genre: "Stand Up Comedy", description: "La Fiebre Soy Yo — Stand Up Comedy con Botota Fox. Entrada: $20.000. Cupos limitados. Reservas al +569 8790 0077.", image: showBototaFox },
+  { date: "29", month: "MAR", day: "Sábado", time: "21:00", artist: "Próximamente...", genre: "Sorpresa", description: "Algo grande se viene. Mantente atento a nuestras redes para el anuncio." },
+  { date: "05", month: "ABR", day: "Sábado", time: "21:00", artist: "Próximamente...", genre: "Sorpresa", description: "Una noche que no te querrás perder. Pronto revelaremos los detalles." },
 ];
 
 const ShowsSection = () => {
