@@ -37,6 +37,10 @@ const upcomingShows = [
 const ShowsSection = () => {
   const [current, setCurrent] = useState(0);
   const [expandedShow, setExpandedShow] = useState<number | null>(null);
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleShows = showAll ? upcomingShows : upcomingShows.slice(0, INITIAL_VISIBLE);
+  const hasMore = upcomingShows.length > INITIAL_VISIBLE;
 
   const next = () => setCurrent((prev) => (prev + 1) % shows.length);
   const prev = () => setCurrent((prev) => (prev - 1 + shows.length) % shows.length);
