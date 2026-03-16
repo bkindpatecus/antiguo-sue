@@ -28,8 +28,8 @@ import showBototaFox from "@/assets/show-botota-fox.jpg";
 
 const upcomingShows = [
   { date: "21", month: "MAR", day: "Sábado", time: "21:00", artist: "Botota Fox", genre: "Stand Up Comedy", description: "La Fiebre Soy Yo — Stand Up Comedy con Botota Fox. Entrada: $20.000. Cupos limitados. Reservas al +569 8790 0077.", image: showBototaFox },
-  { date: "29", month: "MAR", day: "Sábado", time: "21:00", artist: "Próximamente...", genre: "Sorpresa", description: "Algo grande se viene. Mantente atento a nuestras redes para el anuncio." },
-  { date: "05", month: "ABR", day: "Sábado", time: "21:00", artist: "Próximamente...", genre: "Sorpresa", description: "Una noche que no te querrás perder. Pronto revelaremos los detalles." },
+  { date: "?", month: "???", day: "", time: "", artist: "Próximamente...", genre: "Sorpresa", description: "Algo grande se viene. Mantente atento a nuestras redes para el anuncio.", mystery: true },
+  { date: "?", month: "???", day: "", time: "", artist: "Próximamente...", genre: "Sorpresa", description: "Una noche que no te querrás perder. Pronto revelaremos los detalles.", mystery: true },
 ];
 
 const ShowsSection = () => {
