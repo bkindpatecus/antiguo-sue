@@ -192,7 +192,7 @@ const ShowsSection = () => {
 
                   {show.image && (
                     <a
-                      href="https://wa.me/56987900077?text=Hola%2C%20quiero%20reservar%20para%20el%20show%20de%20Botota%20Fox%20el%2021%20de%20marzo"
+                      href={`https://wa.me/56987900077?text=${encodeURIComponent(`Hola, quiero reservar para el show de ${show.artist} el ${show.date} de ${show.month.toLowerCase()}`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="mt-4 w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-accent text-sm uppercase tracking-widest rounded-sm hover:bg-primary/90 transition-colors duration-300 glow-warm"
