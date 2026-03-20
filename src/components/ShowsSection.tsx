@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, Music, Calendar, Clock, Tag } from "lucide-react";
+import { ChevronLeft, ChevronRight, Music, Clock, Tag } from "lucide-react";
 import showSinger from "@/assets/show-singer.jpg";
 import showTrumpet from "@/assets/show-trumpet.jpg";
 import showGuitar from "@/assets/show-guitar.jpg";
@@ -25,13 +25,21 @@ const shows = [
 ];
 
 import showBototaFox from "@/assets/show-botota-fox.jpg";
+import showLosTresTributo from "@/assets/show-los-tres-tributo.jpg";
+import showRobertoCarlos from "@/assets/show-roberto-carlos.jpg";
+import showNicoPrior from "@/assets/show-nico-prior.jpg";
+import showZaloReyes from "@/assets/show-zalo-reyes.jpg";
+import showSilvioRodriguez from "@/assets/show-silvio-rodriguez.jpg";
 
 const INITIAL_VISIBLE = 3;
 
 const upcomingShows = [
-  { date: "21", month: "MAR", day: "Sábado", time: "21:00", artist: "Botota Fox", genre: "Stand Up Comedy", description: "La Fiebre Soy Yo — Stand Up Comedy con Botota Fox. Entrada: $20.000. Cupos limitados. Reservas al +569 8790 0077.", image: showBototaFox },
-  { date: "?", month: "???", day: "", time: "", artist: "Próximamente...", genre: "Sorpresa", description: "Algo grande se viene. Mantente atento a nuestras redes para el anuncio.", mystery: true },
-  { date: "?", month: "???", day: "", time: "", artist: "Próximamente...", genre: "Sorpresa", description: "Una noche que no te querrás perder. Pronto revelaremos los detalles.", mystery: true },
+  { date: "21", month: "MAR", day: "Viernes", time: "21:00", artist: "Botota Fox", genre: "Stand Up Comedy", description: "La Fiebre Soy Yo — Stand Up Comedy con Botota Fox. Entrada: $20.000. Cupos limitados. Reservas al +569 8790 0077.", image: showBototaFox },
+  { date: "27", month: "MAR", day: "Viernes", time: "21:00", artist: "Gabriel — Tributo a Los Tres", genre: "Rock Chileno", description: "Tributo a Los Tres. Entrada: $5.000. ¡Cupos limitados! Reservas al +569 8790 0077.", image: showLosTresTributo },
+  { date: "10", month: "ABR", day: "Viernes", time: "21:00", artist: "Alfred Newman — Tributo a Roberto Carlos", genre: "Música Romántica", description: "Tributo a Roberto Carlos. Entrada liberada. Reservas al +569 8790 0077.", image: showRobertoCarlos },
+  { date: "17", month: "ABR", day: "Viernes", time: "21:00", artist: "Nico Prior", genre: "Reggae", description: "Show íntimo de Nico Prior — El mejor reggae. Entrada liberada. Reservas al +569 8790 0077.", image: showNicoPrior },
+  { date: "24", month: "ABR", day: "Viernes", time: "21:00", artist: "Carlos Caro — Tributo a Zalo Reyes", genre: "Música Popular", description: "Tributo a Zalo Reyes por Carlos Caro. Entrada: $5.000. ¡Cupos limitados! Reservas al +569 8790 0077.", image: showZaloReyes },
+  { date: "8", month: "MAY", day: "Viernes", time: "21:00", artist: "Diego Díaz — Tributo a Silvio Rodríguez", genre: "Nueva Trova", description: "Tributo a Silvio Rodríguez por Diego Díaz. Entrada: $10.000. ¡Cupos limitados! Reservas al +569 8790 0077.", image: showSilvioRodriguez },
 ];
 
 const ShowsSection = () => {
@@ -164,18 +172,16 @@ const ShowsSection = () => {
                       </div>
                     </div>
 
-                    {!show.mystery && (
-                      <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                        <span className="inline-flex items-center gap-1">
-                          <Clock className="w-3.5 h-3.5" />
-                          {show.time}
-                        </span>
-                        <span className="inline-flex items-center gap-1">
-                          <Tag className="w-3.5 h-3.5" />
-                          {show.genre}
-                        </span>
-                      </div>
-                    )}
+                    <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                      <span className="inline-flex items-center gap-1">
+                        <Clock className="w-3.5 h-3.5" />
+                        {show.time}
+                      </span>
+                      <span className="inline-flex items-center gap-1">
+                        <Tag className="w-3.5 h-3.5" />
+                        {show.genre}
+                      </span>
+                    </div>
 
                     {expandedShow === i && (
                       <p className="mt-4 pt-4 border-t border-border text-sm text-foreground/70 font-body animate-in fade-in slide-in-from-top-2 duration-300">
@@ -186,7 +192,7 @@ const ShowsSection = () => {
 
                   {show.image && (
                     <a
-                      href="https://wa.me/56987900077?text=Hola%2C%20quiero%20reservar%20para%20el%20show%20de%20Botota%20Fox%20el%2021%20de%20marzo"
+                      href={`https://wa.me/56987900077?text=${encodeURIComponent(`Hola, quiero reservar para el show de ${show.artist} el ${show.date} de ${show.month.toLowerCase()}`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="mt-4 w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-accent text-sm uppercase tracking-widest rounded-sm hover:bg-primary/90 transition-colors duration-300 glow-warm"
