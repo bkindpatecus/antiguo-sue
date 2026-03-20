@@ -138,17 +138,15 @@ const ShowsSection = () => {
             <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground">Próximos Shows</h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto items-start">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {visibleShows.map((show, i) => (
               <div
                 key={i}
-                className={`group text-left border rounded-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-hidden ${
-                  show.image ? "border-primary/50 bg-card" : "border-border bg-card hover:border-primary/50"
-                }`}
+                className="group text-left border border-primary/50 bg-card rounded-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-hidden flex flex-col"
               >
                 {show.image && (
-                  <div className="overflow-hidden">
-                    <img src={show.image} alt={show.artist} className="w-full object-cover object-top" />
+                  <div className="overflow-hidden aspect-[4/5]">
+                    <img src={show.image} alt={show.artist} className="w-full h-full object-cover object-top" />
                   </div>
                 )}
 
