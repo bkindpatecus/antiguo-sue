@@ -25,13 +25,21 @@ const shows = [
 ];
 
 import showBototaFox from "@/assets/show-botota-fox.jpg";
+import showLosTresTributo from "@/assets/show-los-tres-tributo.jpg";
+import showRobertoCarlos from "@/assets/show-roberto-carlos.jpg";
+import showNicoPrior from "@/assets/show-nico-prior.jpg";
+import showZaloReyes from "@/assets/show-zalo-reyes.jpg";
+import showSilvioRodriguez from "@/assets/show-silvio-rodriguez.jpg";
 
 const INITIAL_VISIBLE = 3;
 
 const upcomingShows = [
-  { date: "21", month: "MAR", day: "Sábado", time: "21:00", artist: "Botota Fox", genre: "Stand Up Comedy", description: "La Fiebre Soy Yo — Stand Up Comedy con Botota Fox. Entrada: $20.000. Cupos limitados. Reservas al +569 8790 0077.", image: showBototaFox },
-  { date: "?", month: "???", day: "", time: "", artist: "Próximamente...", genre: "Sorpresa", description: "Algo grande se viene. Mantente atento a nuestras redes para el anuncio.", mystery: true },
-  { date: "?", month: "???", day: "", time: "", artist: "Próximamente...", genre: "Sorpresa", description: "Una noche que no te querrás perder. Pronto revelaremos los detalles.", mystery: true },
+  { date: "21", month: "MAR", day: "Viernes", time: "21:00", artist: "Botota Fox", genre: "Stand Up Comedy", description: "La Fiebre Soy Yo — Stand Up Comedy con Botota Fox. Entrada: $20.000. Cupos limitados. Reservas al +569 8790 0077.", image: showBototaFox },
+  { date: "27", month: "MAR", day: "Viernes", time: "21:00", artist: "Gabriel — Tributo a Los Tres", genre: "Rock Chileno", description: "Tributo a Los Tres. Entrada: $5.000. ¡Cupos limitados! Reservas al +569 8790 0077.", image: showLosTresTributo },
+  { date: "10", month: "ABR", day: "Viernes", time: "21:00", artist: "Alfred Newman — Tributo a Roberto Carlos", genre: "Música Romántica", description: "Tributo a Roberto Carlos. Entrada liberada. Reservas al +569 8790 0077.", image: showRobertoCarlos },
+  { date: "17", month: "ABR", day: "Viernes", time: "21:00", artist: "Nico Prior", genre: "Reggae", description: "Show íntimo de Nico Prior — El mejor reggae. Entrada liberada. Reservas al +569 8790 0077.", image: showNicoPrior },
+  { date: "24", month: "ABR", day: "Viernes", time: "21:00", artist: "Carlos Caro — Tributo a Zalo Reyes", genre: "Música Popular", description: "Tributo a Zalo Reyes por Carlos Caro. Entrada: $5.000. ¡Cupos limitados! Reservas al +569 8790 0077.", image: showZaloReyes },
+  { date: "8", month: "MAY", day: "Viernes", time: "21:00", artist: "Diego Díaz — Tributo a Silvio Rodríguez", genre: "Nueva Trova", description: "Tributo a Silvio Rodríguez por Diego Díaz. Entrada: $10.000. ¡Cupos limitados! Reservas al +569 8790 0077.", image: showSilvioRodriguez },
 ];
 
 const ShowsSection = () => {
