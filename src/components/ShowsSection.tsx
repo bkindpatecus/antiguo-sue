@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, Music, Calendar, Clock, Tag } from "lucide-react";
+import { ChevronLeft, ChevronRight, Music, Clock, Tag } from "lucide-react";
 import showSinger from "@/assets/show-singer.jpg";
 import showTrumpet from "@/assets/show-trumpet.jpg";
 import showGuitar from "@/assets/show-guitar.jpg";
