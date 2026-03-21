@@ -144,6 +144,8 @@ const menuData: Category[] = [
       { name: "Ginger Beer", desc: "Fermento de agua, jengibre y azúcar. Alc: 0%", price: "$3.400" },
       { name: "Michelada o Chelada", desc: "Preparación con cerveza.", price: "$1.000" },
       { name: "Cerveza Importada", desc: "Consultar disponibilidad.", price: "$3.600" },
+      { name: "Stella Artois", desc: "Cerveza importada en formato pinta.", price: "Pinta $4.600" },
+      { name: "Quilmes", desc: "Cerveza importada en formato pinta.", price: "Pinta $4.600" },
       { name: "Cerveza 0° Alcohol", desc: "Sin alcohol.", price: "$3.400" },
     ],
   },
