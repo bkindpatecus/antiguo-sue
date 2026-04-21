@@ -26,16 +26,12 @@ const shows = [
 
 import showBototaFox from "@/assets/show-botota-fox.jpg";
 import showLosTresTributo from "@/assets/show-los-tres-tributo.jpg";
-import showRobertoCarlos from "@/assets/show-roberto-carlos.jpg";
-import showNicoPrior from "@/assets/show-nico-prior.jpg";
-import showZaloReyes from "@/assets/show-zalo-reyes.jpg";
-import showSilvioRodriguez from "@/assets/show-silvio-rodriguez.jpg";
+const showZaloReyes = "/show-zalo-reyes.jpg";
+const showSilvioRodriguez = "/show-silvio-rodriguez.jpg";
 
 const INITIAL_VISIBLE = 3;
 
 const upcomingShows = [
-  { date: "10", month: "ABR", day: "Viernes", time: "21:00", artist: "Alfred Newman — Tributo a Roberto Carlos", genre: "Música Romántica", description: "Tributo a Roberto Carlos. Entrada liberada. Reservas al +569 8790 0077.", image: showRobertoCarlos },
-  { date: "17", month: "ABR", day: "Viernes", time: "21:00", artist: "Nico Prior", genre: "Reggae", description: "Show íntimo de Nico Prior — El mejor reggae. Entrada liberada. Reservas al +569 8790 0077.", image: showNicoPrior },
   { date: "24", month: "ABR", day: "Viernes", time: "21:00", artist: "Carlos Caro — Tributo a Zalo Reyes", genre: "Música Popular", description: "Tributo a Zalo Reyes por Carlos Caro. Entrada: $5.000. ¡Cupos limitados! Reservas al +569 8790 0077.", image: showZaloReyes },
   { date: "8", month: "MAY", day: "Viernes", time: "21:00", artist: "Diego Díaz — Tributo a Silvio Rodríguez", genre: "Nueva Trova", description: "Tributo a Silvio Rodríguez por Diego Díaz. Entrada: $10.000. ¡Cupos limitados! Reservas al +569 8790 0077.", image: showSilvioRodriguez },
 ];
