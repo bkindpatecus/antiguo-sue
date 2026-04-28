@@ -26,13 +26,11 @@ const shows = [
 
 import showBototaFox from "@/assets/show-botota-fox.jpg";
 import showLosTresTributo from "@/assets/show-los-tres-tributo.jpg";
-const showZaloReyes = "/show-zalo-reyes.jpg";
 const showSilvioRodriguez = "/show-silvio-rodriguez.jpg";
 
 const INITIAL_VISIBLE = 3;
 
 const upcomingShows = [
-  { date: "24", month: "ABR", day: "Viernes", time: "21:00", artist: "Carlos Caro — Tributo a Zalo Reyes", genre: "Música Popular", description: "Tributo a Zalo Reyes por Carlos Caro. Entrada: $5.000. ¡Cupos limitados! Reservas al +569 8790 0077.", image: showZaloReyes },
   { date: "8", month: "MAY", day: "Viernes", time: "21:00", artist: "Diego Díaz — Tributo a Silvio Rodríguez", genre: "Nueva Trova", description: "Tributo a Silvio Rodríguez por Diego Díaz. Entrada: $10.000. ¡Cupos limitados! Reservas al +569 8790 0077.", image: showSilvioRodriguez },
 ];
 
